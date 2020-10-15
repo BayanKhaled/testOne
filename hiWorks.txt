@@ -1,0 +1,14 @@
+DB_DATABASE=here your database name(blog)
+DB_USERNAME=here database username(root)
+DB_PASSWORD=here database password(root)
+
+Step 3: Create Models & Migrations for admins & vendors
+php artisan make:model Admin -m
+php artisan make:model Vendor -m
+
+Step 4: Update the models
+app/Admin.php
+namespace App\Models;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+class Admin extends Authenticatable
